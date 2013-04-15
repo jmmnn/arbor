@@ -194,6 +194,7 @@
 
             return false
           },
+ 
           dragged:function(e){
             var old_nearest = nearest && nearest.node._id
             var pos = $(canvas).offset();
@@ -233,6 +234,7 @@
     return that
   }
   
+         
   
   var Nav = function(elt){
     var dom = $(elt)
@@ -333,6 +335,7 @@
     return that
   }
   
+    
   $(document).ready(function(){
     var CLR = {
       branch:"#b2b19d",
@@ -379,7 +382,10 @@
       }
     }
 
-    
+   
+        var radius = selected.node.data
+            
+   
     
     var sys = arbor.ParticleSystem()
     sys.parameters({stiffness:900, repulsion:2000, gravity:true, dt:0.015})
